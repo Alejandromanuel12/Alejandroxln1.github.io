@@ -1,0 +1,124 @@
+/* Estilos básicos y configuración general */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #000428, #004e92);
+    overflow: hidden;
+    color: white;
+}
+
+#inicio {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.button {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    font-size: 1.5em;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(255, 65, 108, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 65, 108, 0.8);
+}
+
+/* Contenedores ocultos inicialmente */
+.container {
+    display: none;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Estilos del poema */
+#poema h1, #noTeQuiero h1 {
+    color: pink;
+    font-size: 3em;
+}
+
+#poema p {
+    font-size: 1.5em;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Corazón con animación */
+#corazon {
+    font-size: 50px;
+    color: pink;
+    animation: latido 1s infinite;
+    margin-top: 20px;
+}
+
+@keyframes latido {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Animación de fondo dinámico */
+body.fade-bg {
+    animation: colorchange 5s infinite alternate;
+}
+
+@keyframes colorchange {
+    0% {
+        background: linear-gradient(45deg, #000428, #004e92);
+    }
+    50% {
+        background: linear-gradient(45deg, #1e3c72, #2a5298);
+    }
+    100% {
+        background: linear-gradient(45deg, #000428, #004e92);
+    }
+}
+
+/* Mensaje de "No te quiero" */
+#noTeQuiero h1 {
+    color: red;
+    font-size: 3em;
+}
+
+/* Transición del fondo rosa y negro al final del poema */
+body.poema-bg {
+    background: linear-gradient(45deg, black, pink);
+}
+
+#poema h1, #poema p {
+    color: limegreen;
+}
+
+/* Efecto de entrada suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
